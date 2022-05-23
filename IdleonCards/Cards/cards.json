@@ -1,0 +1,100 @@
+﻿{
+  "Cards": [
+    {
+      "Name": "GreenMushroom",
+      "Level": 0,
+      "Row": 0,
+      "Col": 0
+    },
+    {
+      "Name": "RedMushroom",
+      "Level": 0,
+      "Row": 0,
+      "Col": 1
+    },
+    {
+      "Name": "Frog",
+      "Level": 0,
+      "Row": 0,
+      "Col": 2
+    },
+    {
+      "Name": "BoredBean",
+      "Level": 0,
+      "Row": 0,
+      "Col": 3
+    },
+    {
+      "Name": "Slime",
+      "Level": 0,
+      "Row": 0,
+      "Col": 4
+    },
+    {
+      "Name": "BabyBoa",
+      "Level": 0,
+      "Row": 0,
+      "Col": 5
+    },
+    {
+      "Name": "Carrotman",
+      "Level": 0,
+      "Row": 0,
+      "Col": 6
+    },
+    {
+      "Name": "Glublin",
+      "Level": 0,
+      "Row": 0,
+      "Col": 7
+    },
+    {
+      "Name": "WodeBoard",
+      "Level": 0,
+      "Row": 1,
+      "Col": 0
+    },
+    {
+      "Name": "Gigafrog",
+      "Level": 0,
+      "Row": 1,
+      "Col": 1
+    },
+    {
+      "Name": "Poop",
+      "Level": 0,
+      "Row": 1,
+      "Col": 2
+    },
+    {
+      "Name": "Rat",
+      "Level": 0,
+      "Row": 1,
+      "Col": 3
+    },
+    {
+      "Name": "WalkingStick",
+      "Level": 0,
+      "Row": 1,
+      "Col": 4
+    },
+    {
+      "Name": "Nutto",
+      "Level": 0,
+      "Row": 1,
+      "Col": 5
+    },
+    {
+      "Name": "CrystalCarrot",
+      "Level": 0,
+      "Row": 1,
+      "Col": 6
+    },
+    {
+      "Name": "WoodMushroom",
+      "Level": 0,
+      "Row": 1,
+      "Col": 7
+    }
+  ]
+}
