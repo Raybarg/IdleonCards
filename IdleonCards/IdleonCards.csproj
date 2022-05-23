@@ -85,6 +85,7 @@
     <Compile Include="Buff.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardList.cs" />
+    <Compile Include="Enums\Levels.cs" />
     <Compile Include="frmIdleonCards.cs">
       <SubType>Form</SubType>
     </Compile>

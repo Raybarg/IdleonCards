@@ -13,7 +13,7 @@ namespace TestIdleonCards
         {
             Card c = new(ValidName);
             Assert.AreEqual(ValidName, c.Name);
-            Assert.AreEqual(CardLevels.NotFound, c.Level);
+            Assert.AreEqual(0, (int)c.Level);
             Assert.IsNotNull(c.Image);
         }
 

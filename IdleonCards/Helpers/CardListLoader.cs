@@ -10,14 +10,7 @@ namespace IdleonCards.Helpers
 {
     class CardListing
     {
-        public IList<CardItem> Cards { get; set; }
-    }
-    class CardItem
-    {
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public int Row { get; set; }
-        public int Col { get; set; }
+        public IList<Card> Cards { get; set; }
     }
 
     public static class CardListLoader
@@ -32,11 +25,11 @@ namespace IdleonCards.Helpers
 
             CardListing cll = JsonSerializer.Deserialize<CardListing>(jsonString);
 
-            foreach(CardItem item in cll.Cards)
+            foreach(Card item in cll.Cards)
             {
                 Card c = new Card(item.Name)
                 {
-                    Level = (CardLevels)item.Level,
+                    Level = item.Level,
                     Row = item.Row,
                     Col = item.Col
                 };
