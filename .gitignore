@@ -17,6 +17,8 @@ bld/
 [Rr]elease*/
 *.o
 publish/
+Output/
+IdleonCards/Output/
 
 # Misc vs crap 
 *.v12.suo
