@@ -22,7 +22,7 @@ namespace IdleonCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CardList cl = Helpers.CardListLoader.getCardList();
+            CardList cl = CardList.Load();
 
             if (cl != null && cl.Count > 0)
             {

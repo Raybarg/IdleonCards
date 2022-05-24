@@ -93,7 +93,6 @@
       <DependentUpon>frmIdleonCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CardImgLoader.cs" />
-    <Compile Include="Helpers\CardListLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmIdleonCards.resx">

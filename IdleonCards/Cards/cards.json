@@ -1,5 +1,4 @@
-﻿{
-  "Cards": [
+﻿  [
     {
       "Name": "GreenMushroom",
       "Level": 0,
@@ -97,4 +96,3 @@
       "Col": 7
     }
   ]
-}
