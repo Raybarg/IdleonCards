@@ -33,7 +33,7 @@ namespace IdleonCards
                     cardButtons[i].Name = cl[i].Name;
 
                     cardButtons[i].Visible = true;
-                    cardButtons[i].Location = new Point(40 + cl[i].Col * 32, 40 + cl[i].Row * 48);
+                    cardButtons[i].Location = cl[i].Location;
                     cardButtons[i].Size = new Size(new Point(27, 35));
                     cardButtons[i].Image = cl[i].Image;
                     cardButtons[i].FlatStyle = FlatStyle.Flat;

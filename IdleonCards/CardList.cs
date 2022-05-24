@@ -22,28 +22,12 @@ namespace IdleonCards
 
         private void LoadCardList()
         {
-            this.DeserializeCardList(File.ReadAllText(CardListFileName));
+            DeserializeCardList(File.ReadAllText(CardListFileName));
         }
 
         public void DeserializeCardList(string jsonCards)
         {
-            IList<Card> Cards = JsonSerializer.Deserialize<IList<Card>>(jsonCards);
-            foreach (Card item in Cards)
-            {
-                Card c = new Card(item.Name)
-                {
-                    Level = item.Level,
-                    Row = item.Row,
-                    Col = item.Col
-                };
-                this.Add(c);
-            }
+            AddRange(JsonSerializer.Deserialize<List<Card>>(jsonCards));
         }
-
-        public void AddCard(string name)
-        {
-            this.Add(new Card(name));
-        }
-
     }
 }
