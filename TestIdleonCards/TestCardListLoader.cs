@@ -12,7 +12,7 @@ namespace TestIdleonCards
     public class TestCardListLoader
     {
         /// <summary>
-        /// Test statit construct (dummy test for copypasta)
+        /// Test static construct (dummy test for copypasta)
         /// </summary>
         [TestMethod]
         public void TestConstructor()
@@ -22,7 +22,7 @@ namespace TestIdleonCards
         }
 
         /// <summary>
-        /// Test statit construct (dummy test for copypasta)
+        /// Test json cardlist deserializing loader
         /// </summary>
         [TestMethod]
         public void TestLoader()
