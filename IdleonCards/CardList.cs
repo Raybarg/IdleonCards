@@ -29,5 +29,10 @@ namespace IdleonCards
         {
             AddRange(JsonSerializer.Deserialize<List<Card>>(jsonCards));
         }
+
+        public void Save()
+        {
+            File.WriteAllText(CardListFileName, JsonSerializer.Serialize(this));
+        }
     }
 }

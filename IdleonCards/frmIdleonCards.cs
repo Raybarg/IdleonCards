@@ -15,6 +15,7 @@ namespace IdleonCards
     {
         Color DefaultColor;
         Button[] cardButtons;
+        CardList IdleonCards;
         public Form1()
         {
             InitializeComponent();
@@ -22,20 +23,22 @@ namespace IdleonCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CardList cl = CardList.Load();
+            IdleonCards = CardList.Load();
 
-            if (cl != null && cl.Count > 0)
+            if (IdleonCards != null && IdleonCards.Count > 0)
             {
-                cardButtons = new Button[cl.Count];
-                for (int i = 0; i < cl.Count; i++)
+                cardButtons = new Button[IdleonCards.Count];
+                for (int i = 0; i < IdleonCards.Count; i++)
                 {
+                    IdleonCards[i].Level = Enums.Levels.Star1;
+
                     cardButtons[i] = new Button();
-                    cardButtons[i].Name = cl[i].Name;
+                    cardButtons[i].Name = IdleonCards[i].Name;
 
                     cardButtons[i].Visible = true;
-                    cardButtons[i].Location = cl[i].Location;
+                    cardButtons[i].Location = IdleonCards[i].Location;
                     cardButtons[i].Size = new Size(new Point(27, 35));
-                    cardButtons[i].Image = cl[i].Image;
+                    cardButtons[i].Image = IdleonCards[i].Image;
                     cardButtons[i].FlatStyle = FlatStyle.Flat;
                     cardButtons[i].FlatAppearance.BorderSize = 1;
 
@@ -62,6 +65,11 @@ namespace IdleonCards
             }
             
             this.ActiveControl = null;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            IdleonCards.Save();
         }
     }
 }

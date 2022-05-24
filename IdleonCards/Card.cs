@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using IdleonCards.Helpers;
+using System.Text.Json.Serialization;
 
 namespace IdleonCards
 {
@@ -15,11 +16,13 @@ namespace IdleonCards
         public Enums.Levels Level { get; set; }
 
         private Image _image;
+
+        [JsonIgnore]
         public Image Image {
             get {
                 if (_image == null)
                 {
-                    _image = CardImgLoader.getCardImage(Name);
+                    _image = CardImgLoader.GetCardImage(Name);
                 }
                 return _image;
             }
@@ -28,8 +31,9 @@ namespace IdleonCards
         public int Row { get; set; }
         public int Col { get; set; }
 
-        public Point Location { get
-            {
+        [JsonIgnore]
+        public Point Location { 
+            get {
                 return new Point(40 + Col * 32, 40 + Row * 48);
             } 
         }
