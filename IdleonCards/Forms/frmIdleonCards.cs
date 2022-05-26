@@ -16,6 +16,7 @@ namespace IdleonCards
         Color DefaultColor;
         Button[] cardButtons;
         CardList IdleonCards;
+        Buffs Buffs;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace IdleonCards
         private void Form1_Load(object sender, EventArgs e)
         {
             IdleonCards = CardList.Load();
+
+            Buffs = new Buffs();
 
             if (IdleonCards != null && IdleonCards.Count > 0)
             {

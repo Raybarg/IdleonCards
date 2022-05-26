@@ -13,6 +13,10 @@ namespace IdleonCards
     {
 
         public string Name { get; set; }
+
+        public string BuffGroup { get; set; }
+        public string BuffType { get; set; }
+
         public Enums.Levels Level { get; set; }
 
         private Image _image;

@@ -34,5 +34,14 @@ namespace IdleonCards
         {
             File.WriteAllText(CardListFileName, JsonSerializer.Serialize(this));
         }
+
+        /// <summary>
+        /// Return dictionary of buffs from all cards
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, string> GetBuffs()
+        {
+            return this.ToDictionary(f => f.BuffGroup, f => f.BuffType);
+        }
     }
 }

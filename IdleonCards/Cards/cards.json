@@ -1,96 +1,144 @@
 ﻿  [
     {
+      "Area": 0,
       "Name": "GreenMushroom",
+      "BuffGroup": "Class",
+      "BuffType":  "BaseHP",
       "Level": 0,
       "Row": 0,
       "Col": 0
     },
     {
+      "Area": 0,
       "Name": "RedMushroom",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 1
     },
     {
+      "Area": 0,
       "Name": "Frog",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 2
     },
     {
+      "Area": 0,
       "Name": "BoredBean",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 3
     },
     {
+      "Area": 0,
       "Name": "Slime",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 4
     },
     {
+      "Area": 0,
       "Name": "BabyBoa",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 5
     },
     {
+      "Area": 0,
       "Name": "Carrotman",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 6
     },
     {
+      "Area": 0,
       "Name": "Glublin",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 0,
       "Col": 7
     },
     {
+      "Area": 0,
       "Name": "WodeBoard",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 0
     },
     {
+      "Area": 0,
       "Name": "Gigafrog",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 1
     },
     {
+      "Area": 0,
       "Name": "Poop",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 2
     },
     {
+      "Area": 0,
       "Name": "Rat",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 3
     },
     {
+      "Area": 0,
       "Name": "WalkingStick",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 4
     },
     {
+      "Area": 0,
       "Name": "Nutto",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 5
     },
     {
+      "Area": 0,
       "Name": "CrystalCarrot",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 6
     },
     {
+      "Area": 0,
       "Name": "WoodMushroom",
+      "BuffGroup": "",
+      "BuffType": "",
       "Level": 0,
       "Row": 1,
       "Col": 7

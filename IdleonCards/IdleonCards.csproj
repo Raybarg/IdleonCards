@@ -82,20 +82,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buff.cs" />
-    <Compile Include="Card.cs" />
-    <Compile Include="CardList.cs" />
+    <Compile Include="Classes\Buffs.cs" />
+    <Compile Include="Classes\Card.cs" />
+    <Compile Include="Classes\CardList.cs" />
     <Compile Include="Enums\Levels.cs" />
-    <Compile Include="frmIdleonCards.cs">
+    <Compile Include="Forms\frmIdleonCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>frmIdleonCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CardImgLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmIdleonCards.resx">
+    <EmbeddedResource Include="Forms\frmIdleonCards.resx">
       <DependentUpon>frmIdleonCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
