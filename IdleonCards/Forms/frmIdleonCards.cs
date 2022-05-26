@@ -27,6 +27,7 @@ namespace IdleonCards
             IdleonCards = CardList.Load();
 
             Buffs = new Buffs();
+            Buffs.Fill(IdleonCards.GetBuffs());
 
             if (IdleonCards != null && IdleonCards.Count > 0)
             {
@@ -35,16 +36,16 @@ namespace IdleonCards
                 {
                     IdleonCards[i].Level = Enums.Levels.Star1;
 
-                    cardButtons[i] = new Button();
-                    cardButtons[i].Name = IdleonCards[i].Name;
-
-                    cardButtons[i].Visible = true;
-                    cardButtons[i].Location = IdleonCards[i].Location;
-                    cardButtons[i].Size = new Size(new Point(27, 35));
-                    cardButtons[i].Image = IdleonCards[i].Image;
-                    cardButtons[i].FlatStyle = FlatStyle.Flat;
+                    cardButtons[i] = new Button
+                    {
+                        Name = IdleonCards[i].Name,
+                        Visible = true,
+                        Location = IdleonCards[i].Location,
+                        Size = new Size(new Point(27, 35)),
+                        Image = IdleonCards[i].Image,
+                        FlatStyle = FlatStyle.Flat
+                    };
                     cardButtons[i].FlatAppearance.BorderSize = 1;
-
                     cardButtons[i].Click += CardButtonClick;
 
                     this.Controls.Add(cardButtons[i]);

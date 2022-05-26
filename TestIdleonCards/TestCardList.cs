@@ -9,9 +9,9 @@ using IdleonCards;
 namespace TestIdleonCards
 {
     [TestClass]
-    public class TestCardListLoader
+    public class TestCardList
     {
-        string jsonString = @"[{
+        static readonly string jsonString = @"[{
                                     ""Name"": ""GreenMushroom"",
                                     ""BuffGroup"": ""Generic"",
                                     ""BuffType"": ""Buff"",

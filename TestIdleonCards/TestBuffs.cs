@@ -11,9 +11,9 @@ namespace TestIdleonCards
     [TestClass]
     public class TestBuffs
     {
-        static string BuffClass = "TestBuffClass";
-        static string BuffType = "TestBuffType";
-        KeyValuePair<string, string> SingleBuff = new(BuffClass, BuffType);
+        static readonly string BuffClass = "TestBuffClass";
+        static readonly string BuffType = "TestBuffType";
+        static readonly KeyValuePair<string, string> SingleBuff = new(BuffClass, BuffType);
 
         /// <summary>
         /// Dummy list test
