@@ -25,32 +25,15 @@ namespace IdleonCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CardList a = new CardList();
+            if (a != null && a.Count > 0)
+            {
+
+            }
             IdleonCards = CardList.Load();
             Buffs = new Buffs(IdleonCards.GetBuffs());
 
-            if (IdleonCards != null && IdleonCards.Count > 0)
-            {
-                cardButtons = new Button[IdleonCards.Count];
-                for (int i = 0; i < IdleonCards.Count; i++)
-                {
-                    IdleonCards[i].Level = Enums.Levels.Star1;
-
-                    cardButtons[i] = new Button
-                    {
-                        Name = IdleonCards[i].Name,
-                        Visible = true,
-                        Location = IdleonCards[i].Location,
-                        Size = new Size(new Point(27, 35)),
-                        Image = IdleonCards[i].Image,
-                        FlatStyle = FlatStyle.Flat
-                    };
-                    cardButtons[i].FlatAppearance.BorderSize = 1;
-                    cardButtons[i].Click += CardButtonClick;
-
-                    this.Controls.Add(cardButtons[i]);
-                }
-            }
-            
+            CreateCardButtons();
         }
 
         private void CardButtonClick(object sender, EventArgs e)
@@ -74,5 +57,41 @@ namespace IdleonCards
         {
             IdleonCards.Save();
         }
+
+        #region "Dynamic Loading"
+        private void CreateCardButtons()
+        {
+            if (IdleonCards != null && IdleonCards.Count > 0)
+            {
+                cardButtons = new Button[IdleonCards.Count];
+                for (int i = 0; i < IdleonCards.Count; i++)
+                {
+                    IdleonCards[i].Level = Enums.Levels.Star1;
+
+                    cardButtons[i] = new Button
+                    {
+                        Name = IdleonCards[i].Name,
+                        Visible = true,
+                        Location = IdleonCards[i].Location,
+                        Size = new Size(new Point(27, 35)),
+                        Image = IdleonCards[i].Image,
+                        FlatStyle = FlatStyle.Flat
+                    };
+                    cardButtons[i].FlatAppearance.BorderSize = 1;
+                    cardButtons[i].Click += CardButtonClick;
+
+                    this.Controls.Add(cardButtons[i]);
+                }
+            }
+        }
+
+        private void CreateBuffSelectorCheckboxes()
+        {
+            if (Buffs != null && Buffs.Count > 0)
+            {
+
+            }
+        }
+        #endregion
     }
 }

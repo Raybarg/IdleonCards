@@ -21,8 +21,8 @@ namespace TestIdleonCards
         [TestMethod]
         public void TestFillBuffList()
         {
-            Dictionary<string, string> buffs = new();
-            buffs.Add(SingleBuff.Key, SingleBuff.Value);
+            List<Tuple<string, string>> buffs = new();
+            buffs.Add(new Tuple<string, string>(SingleBuff.Key, SingleBuff.Value));
             Buffs b = new(buffs);
             Assert.AreEqual(1, b.Count);
             Assert.AreEqual(BuffClass, b.FirstOrDefault().Class);

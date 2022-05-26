@@ -22,7 +22,7 @@ namespace IdleonCards
 
     public class Buffs: List<Buff>
     {
-        public Buffs(Dictionary<string, string> BuffsDict)
+        public Buffs(List<Tuple<string, string>> BuffsDict)
         {
             Fill(BuffsDict);
         }
@@ -32,11 +32,11 @@ namespace IdleonCards
             this.Add(new Buff(BuffClass, BuffType));
         }
 
-        public void Fill(Dictionary<string, string> BuffsDict)
+        public void Fill(List<Tuple<string, string>> BuffsDict)
         {
-            foreach (KeyValuePair<string, string> buff in BuffsDict)
+            foreach (Tuple<string, string> buff in BuffsDict)
             {
-                this.AddBuff(buff.Key, buff.Value);
+                this.AddBuff(buff.Item1, buff.Item2);
             }
         }
     }

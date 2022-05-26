@@ -39,9 +39,9 @@ namespace IdleonCards
         /// Return dictionary of buffs from all cards
         /// </summary>
         /// <returns></returns>
-        public Dictionary<string, string> GetBuffs()
+        public List<Tuple<string, string>> GetBuffs()
         {
-            return this.ToDictionary(f => f.BuffGroup, f => f.BuffType);
+            return this.Distinct().Select(c => new Tuple<string, string>(c.BuffGroup, c.BuffType)).ToList();
         }
     }
 }
