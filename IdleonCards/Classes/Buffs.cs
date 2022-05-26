@@ -22,6 +22,11 @@ namespace IdleonCards
 
     public class Buffs: List<Buff>
     {
+        public Buffs(Dictionary<string, string> BuffsDict)
+        {
+            Fill(BuffsDict);
+        }
+
         public void AddBuff(string BuffClass, string BuffType)
         {
             this.Add(new Buff(BuffClass, BuffType));

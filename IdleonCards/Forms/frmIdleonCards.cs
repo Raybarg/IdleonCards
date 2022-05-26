@@ -17,6 +17,7 @@ namespace IdleonCards
         Button[] cardButtons;
         CardList IdleonCards;
         Buffs Buffs;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,9 +26,7 @@ namespace IdleonCards
         private void Form1_Load(object sender, EventArgs e)
         {
             IdleonCards = CardList.Load();
-
-            Buffs = new Buffs();
-            Buffs.Fill(IdleonCards.GetBuffs());
+            Buffs = new Buffs(IdleonCards.GetBuffs());
 
             if (IdleonCards != null && IdleonCards.Count > 0)
             {
