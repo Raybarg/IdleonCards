@@ -25,11 +25,6 @@ namespace IdleonCards
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CardList a = new CardList();
-            if (a != null && a.Count > 0)
-            {
-
-            }
             IdleonCards = CardList.Load();
             Buffs = new Buffs(IdleonCards.GetBuffs());
 
@@ -89,7 +84,7 @@ namespace IdleonCards
         {
             if (Buffs != null && Buffs.Count > 0)
             {
-
+                
             }
         }
         #endregion

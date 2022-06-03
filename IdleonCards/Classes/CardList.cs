@@ -36,12 +36,16 @@ namespace IdleonCards
         }
 
         /// <summary>
-        /// Return dictionary of buffs from all cards
+        /// Return buffs as distinct list of tuples from all cards
         /// </summary>
         /// <returns></returns>
         public List<Tuple<string, string>> GetBuffs()
         {
-            return this.Distinct().Select(c => new Tuple<string, string>(c.BuffGroup, c.BuffType)).ToList();
+            return (from card in this 
+                    group card by (card.BuffGroup, card.BuffType) into g 
+                    select g)
+                    .Select(c => new Tuple<string, string>(c.First().BuffGroup, c.First().BuffType))
+                    .ToList();
         }
     }
 }

@@ -27,17 +27,9 @@ namespace IdleonCards
             Fill(BuffsDict);
         }
 
-        public void AddBuff(string BuffClass, string BuffType)
+        public void Fill(List<Tuple<string, string>> BuffsList)
         {
-            this.Add(new Buff(BuffClass, BuffType));
-        }
-
-        public void Fill(List<Tuple<string, string>> BuffsDict)
-        {
-            foreach (Tuple<string, string> buff in BuffsDict)
-            {
-                this.AddBuff(buff.Item1, buff.Item2);
-            }
+            AddRange(BuffsList.Select(b => new Buff(b.Item1, b.Item2)).ToList());
         }
     }
 
